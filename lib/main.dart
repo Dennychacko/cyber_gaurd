@@ -10,7 +10,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 // ============================================================
 // !!!  PASTE YOUR NEW API KEY HERE  !!!
 // ============================================================
-const String globalApiKey = "AIzaSyCMYRwcb4uz5fy04xEeDAZx8VZuEteypMU"; 
+const String globalApiKey = "PASTE_YOUR_API_KEY_HERE"; 
 // ============================================================
 
 // --- GLOBAL LANGUAGE NOTIFIER ---
@@ -48,39 +48,44 @@ class MyApp extends StatelessWidget {
 class T {
   static Map<String, Map<String, String>> db = {
     "en": {
-      "app_name": "Kerala Cyber Guard",
+      "app_name": "Cyber Guard",
       "subtitle": "Secure your digital life.",
       "login_google": "Sign in with Google",
       "menu_screenshot": "Screenshot & AI Detector",
+      "menu_video": "Deepfake Video Scanner",
       "menu_link": "Link / URL Analyzer",
       "menu_helpline": "Helpline Numbers",
       "menu_settings": "Settings",
       "menu_logout": "Logout",
       "scan_title": "Screenshot & AI Detector",
+      "video_title": "Deepfake Video Scanner",
       "upload_text": "Tap to Upload Image",
+      "upload_video_text": "Tap to Upload Video (Short)",
       "verify_btn": "Check Safety",
       "report_btn": "Report to Police",
       "analyzing": "Scanning for Scams & AI...",
       "link_title": "Link / URL Scanner",
       "paste_link": "Paste link here",
       "scan_link_btn": "Scan Link",
-      "helpline_title": "Kerala Cyber Helplines",
+      "helpline_title": "Cyber Helplines",
       "call": "Call",
       "settings_title": "Settings",
       "select_lang": "Select Language",
     },
-    // ... (Keep your other languages here if needed, keeping it short for copy-paste)
     "ml": {
-      "app_name": "കേരള സൈബർ ഗാർഡ്",
+      "app_name": "സൈബർ ഗാർഡ്",
       "subtitle": "നിങ്ങളുടെ ഡിജിറ്റൽ ജീവിതം സുരക്ഷിതമാക്കൂ.",
       "login_google": "Google വഴി ലോഗിൻ ചെയ്യുക",
       "menu_screenshot": "ചിത്രങ്ങൾ / AI പരിശോധന",
+      "menu_video": "ഡീപ്ഫേക്ക് വീഡിയോ സ്കാനർ",
       "menu_link": "ലിങ്ക് പരിശോധന",
       "menu_helpline": "സഹായ നമ്പറുകൾ",
       "menu_settings": "ക്രമീകരണങ്ങൾ",
       "menu_logout": "പുറത്തുകടക്കുക",
       "scan_title": "ചിത്രങ്ങൾ / AI പരിശോധന",
+      "video_title": "ഡീപ്ഫേക്ക് വീഡിയോ സ്കാനർ",
       "upload_text": "ചിത്രം അപ്‌ലോഡ് ചെയ്യുക",
+      "upload_video_text": "വീഡിയോ അപ്‌ലോഡ് ചെയ്യുക",
       "verify_btn": "സുരക്ഷ പരിശോധിക്കൂ",
       "report_btn": "പോലീസിൽ അറിയിക്കുക",
       "analyzing": "പരിശോധിക്കുന്നു...",
@@ -92,10 +97,59 @@ class T {
       "settings_title": "ക്രമീകരണങ്ങൾ",
       "select_lang": "ഭാഷ തിരഞ്ഞെടുക്കുക",
     },
+     "hi": {
+      "app_name": "साइबर गार्ड",
+      "subtitle": "अपने डिजिटल जीवन को सुरक्षित करें।",
+      "login_google": "Google के साथ साइन इन करें",
+      "menu_screenshot": "स्क्रीनशॉट / AI एनालाइजर",
+      "menu_video": "दीपफेक वीडियो स्कैनर",
+      "menu_link": "लिंक / URL एनालाइजर",
+      "menu_helpline": "हेल्पलाइन नंबर",
+      "menu_settings": "सेटिंग्स",
+      "menu_logout": "लॉग आउट",
+      "scan_title": "स्क्रीनशॉट / AI एनालाइजर",
+      "video_title": "दीपफेक वीडियो स्कैनर",
+      "upload_text": "स्क्रीनशॉट अपलोड करें",
+      "upload_video_text": "वीडियो अपलोड करें",
+      "verify_btn": "सुरक्षा जांचें",
+      "report_btn": "पुलिस को रिपोर्ट करें",
+      "analyzing": "स्कैनिंग...",
+      "link_title": "लिंक स्कैनर",
+      "paste_link": "लिंक यहाँ पेस्ट करें",
+      "scan_link_btn": "लिंक स्कैन करें",
+      "helpline_title": "साइबर हेल्पलाइन",
+      "call": "कॉल करें",
+      "settings_title": "सेटिंग्स",
+      "select_lang": "भाषा चुनें",
+    },
+    "ta": {
+      "app_name": "சைபர் கார்ட்",
+      "subtitle": "உங்கள் டிஜிட்டல் வாழ்க்கையைப் பாதுகாக்கவும்.",
+      "login_google": "Google மூலம் உள்நுழையவும்",
+      "menu_screenshot": "AI மற்றும் பட அனலைசர்",
+      "menu_video": "டீப் ஃபேக் வீடியோ ஸ்கேனர்",
+      "menu_link": "இணைப்பு / URL அனலைசர்",
+      "menu_helpline": "உதவி எண்கள்",
+      "menu_settings": "அமைப்புகள்",
+      "menu_logout": "வெளியேறு",
+      "scan_title": "AI மற்றும் பட அனலைசர்",
+      "video_title": "டீப் ஃபேக் வீடியோ ஸ்கேனர்",
+      "upload_text": "படத்தைப் பதிவேற்றவும்",
+      "upload_video_text": "வீடியோவைப் பதிவேற்றவும்",
+      "verify_btn": "பாதுகாப்பைச் சரிபார்க்கவும்",
+      "report_btn": "காவல்துறையிடம் புகார் அளிக்கவும்",
+      "analyzing": "ஸ்கேன் செய்கிறது...",
+      "link_title": "இணைப்பு ஸ்கேனர்",
+      "paste_link": "இணைப்பை இங்கே ஒட்டவும்",
+      "scan_link_btn": "இணைப்பை ஸ்கேன் செய்யவும்",
+      "helpline_title": "சைபர் உதவி எண்கள்",
+      "call": "அழைக்கவும்",
+      "settings_title": "அமைப்புகள்",
+      "select_lang": "மொழியைத் தேர்ந்தெடுக்கவும்",
+    }
   };
 
   static String get(String key) {
-    // Default to English if translation is missing
     return db[currentLanguage.value]?[key] ?? db["en"]![key]!;
   }
 }
@@ -180,7 +234,7 @@ class _LoginPageState extends State<LoginPage> {
 }
 
 // ============================================================
-// 2. HOME PAGE
+// 2. HOME PAGE (NAVIGATION)
 // ============================================================
 class CyberGuardHome extends StatefulWidget {
   const CyberGuardHome({super.key});
@@ -194,6 +248,7 @@ class _CyberGuardHomeState extends State<CyberGuardHome> {
 
   static final List<Widget> _pages = <Widget>[
     const ImageAnalyzerPage(),
+    const VideoAnalyzerPage(),
     const LinkAnalyzerPage(),
     const HelplinePage(),
     const SettingsPage(),
@@ -232,22 +287,28 @@ class _CyberGuardHomeState extends State<CyberGuardHome> {
               onTap: () => _onItemTapped(0),
             ),
             ListTile(
-              leading: const Icon(Icons.link),
-              title: Text(T.get("menu_link")),
+              leading: const Icon(Icons.videocam_outlined),
+              title: Text(T.get("menu_video")),
               selected: _selectedIndex == 1,
               onTap: () => _onItemTapped(1),
             ),
             ListTile(
-              leading: const Icon(Icons.phone_in_talk),
-              title: Text(T.get("menu_helpline")),
+              leading: const Icon(Icons.link),
+              title: Text(T.get("menu_link")),
               selected: _selectedIndex == 2,
               onTap: () => _onItemTapped(2),
+            ),
+            ListTile(
+              leading: const Icon(Icons.phone_in_talk),
+              title: Text(T.get("menu_helpline")),
+              selected: _selectedIndex == 3,
+              onTap: () => _onItemTapped(3),
             ),
              ListTile(
               leading: const Icon(Icons.language),
               title: Text(T.get("menu_settings")),
-              selected: _selectedIndex == 3,
-              onTap: () => _onItemTapped(3),
+              selected: _selectedIndex == 4,
+              onTap: () => _onItemTapped(4),
             ),
             const Divider(),
             ListTile(
@@ -266,7 +327,7 @@ class _CyberGuardHomeState extends State<CyberGuardHome> {
 }
 
 // ============================================================
-// 3. IMAGE ANALYZER (USING gemini-1.5-pro)
+// 3. IMAGE & AI ANALYZER
 // ============================================================
 class ImageAnalyzerPage extends StatefulWidget {
   const ImageAnalyzerPage({super.key});
@@ -298,11 +359,12 @@ class _ImageAnalyzerPageState extends State<ImageAnalyzerPage> {
     try {
       if (globalApiKey.contains("PASTE_YOUR")) throw "API Key is missing!";
       
-      // SWITCHED TO 'gemini-1.5-pro' which is very reliable
+      // Using gemini-1.5-flash-latest to avoid version errors
       final model = GenerativeModel(model: 'gemini-2.5-flash', apiKey: globalApiKey);
       
-      String langName = "English";
-      if (currentLanguage.value == "ml") langName = "Malayalam";
+      String langName = currentLanguage.value == "ml" ? "Malayalam" : "English";
+      if (currentLanguage.value == "hi") langName = "Hindi";
+      if (currentLanguage.value == "ta") langName = "Tamil";
 
       final prompt = TextPart("""
       Analyze this image.
@@ -310,11 +372,7 @@ class _ImageAnalyzerPageState extends State<ImageAnalyzerPage> {
       2. Is it AI-GENERATED (Deepfake)?
       
       Answer in $langName language for a 10-year-old.
-      
-      Keywords to use in answer:
-      - 'SAFE ✅' if safe.
-      - 'DANGEROUS 🛑' if unsafe.
-      - 'AI GENERATED 🤖' if fake.
+      Keywords: SAFE ✅, DANGEROUS 🛑, AI GENERATED 🤖.
       """);
       
       final imageBytes = await _screenshot!.readAsBytes();
@@ -330,25 +388,43 @@ class _ImageAnalyzerPageState extends State<ImageAnalyzerPage> {
   }
 
   Future<void> _reportToPolice() async {
+    if (_screenshot == null) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("No evidence found!")));
+      return;
+    }
+
     final Email email = Email(
-      body: 'Report:\n\n$_analysisResult', 
-      subject: 'Cyber Report',
-      recipients: ['cyberps@keralapolice.gov.in'], 
-      attachmentPaths: [_screenshot!.path], 
+      body: 'Respected Officer,\n\nSuspicious activity report.\n\nAI Result:\n$_analysisResult\n\nEvidence attached.',
+      subject: 'Cyber Crime Report',
+      recipients: ['cyberps@keralapolice.gov.in'],
+      attachmentPaths: [_screenshot!.path],
       isHTML: false,
     );
-    try { await FlutterEmailSender.send(email); } catch (e) { print(e); }
+
+    try {
+      await FlutterEmailSender.send(email);
+    } catch (error) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Email App Error: $error"), backgroundColor: Colors.red),
+      );
+      // Fallback
+      final Uri mailLaunch = Uri(
+        scheme: 'mailto',
+        path: 'cyberps@keralapolice.gov.in',
+        query: 'subject=Cyber Report&body=Please check attached evidence.',
+      );
+      await launchUrl(mailLaunch);
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    // RED BOX LOGIC
     bool isRed = _analysisResult.toUpperCase().contains("DANGEROUS") || 
                  _analysisResult.toUpperCase().contains("SCAM") || 
                  _analysisResult.toUpperCase().contains("AI GENERATED") ||
                  _analysisResult.toUpperCase().contains("AI-GENERATED") ||
                  _analysisResult.toUpperCase().contains("UNSAFE") ||
-                 _analysisResult.contains("Error") || // Added Error to Red List
+                 _analysisResult.contains("Error") ||
                  _analysisResult.contains("🛑") || 
                  _analysisResult.contains("🤖");
 
@@ -407,7 +483,117 @@ class _ImageAnalyzerPageState extends State<ImageAnalyzerPage> {
 }
 
 // ============================================================
-// 4. LINK ANALYZER (USING gemini-1.5-pro)
+// 4. DEEPFAKE VIDEO ANALYZER
+// ============================================================
+class VideoAnalyzerPage extends StatefulWidget {
+  const VideoAnalyzerPage({super.key});
+
+  @override
+  State<VideoAnalyzerPage> createState() => _VideoAnalyzerPageState();
+}
+
+class _VideoAnalyzerPageState extends State<VideoAnalyzerPage> {
+  File? _video;
+  String _analysisResult = "";
+  bool _isLoading = false;
+
+  Future<void> _pickVideo() async {
+    final picker = ImagePicker();
+    final pickedFile = await picker.pickVideo(source: ImageSource.gallery);
+    if (pickedFile != null) {
+      setState(() { 
+        _video = File(pickedFile.path); 
+        _analysisResult = ""; 
+      });
+    }
+  }
+
+  Future<void> _checkDeepfake() async {
+    if (_video == null) return;
+    setState(() { _isLoading = true; _analysisResult = T.get("analyzing"); });
+
+    try {
+      if (globalApiKey.contains("PASTE_YOUR")) throw "API Key is missing!";
+      
+      final model = GenerativeModel(model: 'gemini-2.5-flash', apiKey: globalApiKey);
+      
+      String langName = currentLanguage.value == "ml" ? "Malayalam" : "English";
+
+      final prompt = TextPart("""
+      Analyze this video for Deepfakes. 
+      Is this REAL or FAKE? Answer in $langName for a 10-year-old.
+      Keywords: SAFE ✅, DANGEROUS 🛑, DEEPFAKE DETECTED 🤖.
+      """);
+      
+      final videoBytes = await _video!.readAsBytes();
+      final videoPart = DataPart('video/mp4', videoBytes);
+      
+      final response = await model.generateContent([Content.multi([prompt, videoPart])]);
+      setState(() => _analysisResult = response.text ?? "No response");
+    } catch (e) {
+      setState(() => _analysisResult = "Error: $e. (Video might be too large)");
+    } finally {
+      setState(() => _isLoading = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    bool isRed = _analysisResult.toUpperCase().contains("FAKE") || 
+                 _analysisResult.toUpperCase().contains("DEEPFAKE") || 
+                 _analysisResult.toUpperCase().contains("DANGEROUS") ||
+                 _analysisResult.contains("Error") ||
+                 _analysisResult.contains("🛑") || 
+                 _analysisResult.contains("🤖");
+
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(T.get("video_title"), style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+          const SizedBox(height: 10),
+          GestureDetector(
+            onTap: _pickVideo,
+            child: Container(
+              height: 200,
+              decoration: BoxDecoration(border: Border.all(color: Colors.grey), borderRadius: BorderRadius.circular(10)),
+              child: _video == null ? Center(child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(Icons.video_library, size: 50, color: Colors.grey),
+                  Text(T.get("upload_video_text"))
+                ],
+              )) : const Center(child: Icon(Icons.check_circle, size: 60, color: Colors.green)),
+            ),
+          ),
+          const SizedBox(height: 15),
+          ElevatedButton.icon(
+            onPressed: _isLoading ? null : _checkDeepfake, 
+            icon: const Icon(Icons.scanner), 
+            label: const Text("Scan for Deepfake"),
+            style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF1E3A8A), foregroundColor: Colors.white),
+          ),
+          if (_analysisResult.isNotEmpty) ...[
+            const SizedBox(height: 20),
+            Container(
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: isRed ? Colors.red.shade100 : Colors.green.shade100,
+                border: Border.all(color: isRed ? Colors.red : Colors.green, width: 2),
+                borderRadius: BorderRadius.circular(8)
+              ),
+              child: MarkdownBody(data: _analysisResult),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+}
+
+// ============================================================
+// 5. LINK ANALYZER
 // ============================================================
 class LinkAnalyzerPage extends StatefulWidget {
   const LinkAnalyzerPage({super.key});
@@ -429,13 +615,11 @@ class _LinkAnalyzerPageState extends State<LinkAnalyzerPage> {
     setState(() { _isLoading = true; _result = T.get("analyzing"); });
 
     try {
-      if (globalApiKey.contains("PASTE_YOUR")) throw "API Key is missing!";
+      if (globalApiKey.contains("PASTE_YOUR")) throw "API Key is missing in code!";
 
-      // SWITCHED TO 'gemini-1.5-pro'
       final model = GenerativeModel(model: 'gemini-2.5-flash', apiKey: globalApiKey);
       
-      String langName = "English";
-      if (currentLanguage.value == "ml") langName = "Malayalam";
+      String langName = currentLanguage.value == "ml" ? "Malayalam" : "English";
 
       final prompt = "Is this link '${_linkController.text}' SAFE ✅ or DANGEROUS 🛑? Explain to a 10-year-old in $langName. If safe, say 'SAFE'. If dangerous, say 'DANGEROUS'.";
       
@@ -453,7 +637,7 @@ class _LinkAnalyzerPageState extends State<LinkAnalyzerPage> {
     bool isRed = _result.toUpperCase().contains("DANGEROUS") || 
                  _result.toUpperCase().contains("SCAM") || 
                  _result.toUpperCase().contains("UNSAFE") ||
-                 _result.contains("Error") || // Added Error to Red List
+                 _result.contains("Error") ||
                  _result.contains("🛑");
 
     return SingleChildScrollView(
@@ -501,15 +685,17 @@ class _LinkAnalyzerPageState extends State<LinkAnalyzerPage> {
 }
 
 // ============================================================
-// 5. HELPLINE PAGE
+// 6. HELPLINE PAGE (Working Dialer)
 // ============================================================
 class HelplinePage extends StatelessWidget {
   const HelplinePage({super.key});
 
   Future<void> _makeCall(String number) async {
     final Uri launchUri = Uri(scheme: 'tel', path: number);
-    if (await canLaunchUrl(launchUri)) {
-      await launchUrl(launchUri);
+    try {
+      await launchUrl(launchUri, mode: LaunchMode.externalApplication);
+    } catch (e) {
+      debugPrint("Error launching dialer: $e");
     }
   }
 
@@ -553,7 +739,7 @@ class HelplinePage extends StatelessWidget {
 }
 
 // ============================================================
-// 6. SETTINGS PAGE
+// 7. SETTINGS PAGE
 // ============================================================
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -597,7 +783,18 @@ class _SettingsPageState extends State<SettingsPage> {
                   groupValue: currentLanguage.value,
                   onChanged: _changeLanguage,
                 ),
-                // Add more languages here if you want
+                RadioListTile(
+                  title: const Text("हिंदी (Hindi)"),
+                  value: "hi",
+                  groupValue: currentLanguage.value,
+                  onChanged: _changeLanguage,
+                ),
+                RadioListTile(
+                  title: const Text("தமிழ் (Tamil)"),
+                  value: "ta",
+                  groupValue: currentLanguage.value,
+                  onChanged: _changeLanguage,
+                ),
               ],
             ),
           )
